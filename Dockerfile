@@ -77,7 +77,7 @@ RUN buildDeps='\
 	
 ADD database.yml /usr/src/redmine/config/database.yml
 
-VOLUME /usr/src/redmine/files
+VOLUME /usr/src/redmine/
 
 EXPOSE 3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
