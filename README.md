@@ -15,3 +15,8 @@ docker run -d --name some-mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=
 ```sh
 docker run -d --name some-redmine --link some-mysql:slsay/docker-mysql slsay/docker-redmine
 ```
+
+### 登录容器
+```sh
+docker exec -i -t slsay/docker-redmine bash
+```
