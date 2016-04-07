@@ -75,7 +75,7 @@ RUN buildDeps='\
 	&& rm ./config/database.yml \
 	&& apt-get purge -y --auto-remove $buildDeps
 
-VOLUME /usr/src/redmine/
+VOLUME /usr/src/redmine
 
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
