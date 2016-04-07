@@ -16,7 +16,8 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=red
 docker run --name some-redmine \
            --link some-mysql:mysql \
            -p 3000:3000 \
-           -v ~/srv/docker/redmine/redmine:/usr/src/redmine \
+           -v ~/srv/docker/redmine/redmine/public:/usr/src/redmine/public \
+           -v ~/srv/docker/redmine/redmine/plugins:/usr/src/redmine/plugins \
            -d slsay/docker-redmine
 ```
 
