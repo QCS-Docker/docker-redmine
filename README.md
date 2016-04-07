@@ -13,7 +13,11 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=red
 ```
 #### 2. 运行redmine
 ```sh
-docker run --name some-redmine --link some-mysql:mysql -p 3000:3000 -d slsay/docker-redmine
+docker run --name some-redmine \
+           --link some-mysql:mysql \
+           -p 3000:3000 \
+           -v ~/srv/docker/redmine/redmine:/usr/src/redmine \
+           -d slsay/docker-redmine
 ```
 
 ### 登录容器
